@@ -35,15 +35,15 @@ const main = async () => {
 
   app.use(
     session({
-      name: "qid",
+      name: "c_id",
       store: new RedisStore({
         client: redisClient,
         disableTouch: true,
       }),
       cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 365, // 1 year
-        sameSite: "lax", //csrf
         httpOnly: true,
+        sameSite: "lax", //csrf
         secure: __prod__, // cookie only works in https
       },
       secret: "lkasjdhfauwefoahbrogif",
