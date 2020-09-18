@@ -32,6 +32,9 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         context: () => ({ em: orm.em }),
     });
     apolloServer.applyMiddleware({ app });
+    app.get("/", (_, res) => {
+        res.send("vlad says hello");
+    });
     app.listen(3000, () => {
         console.log("server started on " + chalk_1.default.underline("http://localhost:3000"));
     });
