@@ -66,10 +66,10 @@ const main = async () => {
     res.send("vlad says hello");
   });
 
-  // listen on  localhost:3000
-  app.listen(3000, () => {
+  // listen on  localhost:4000
+  app.listen(4000, () => {
     console.log(
-      "server started on " + chalk.underline("http://localhost:3000")
+      "server started on " + chalk.underline("http://localhost:4000")
     );
   });
 };
